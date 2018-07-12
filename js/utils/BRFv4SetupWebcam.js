@@ -29,7 +29,7 @@
 		trace("webcam.setupStream: isPlaying: " + webcam.isPlaying);
 
 		webcam.video			= video;
-		webcam.constraints		= {video: {width: width*2, height: height*2, frameRate: fps}};
+		webcam.constraints		= {video: {width: width, height: height, frameRate: fps}};
 		webcam.onCameraReady	= callback;
 
 		webcam.startStream();
