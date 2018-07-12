@@ -132,7 +132,7 @@ function badTVeffect() {
 
 		//init renderer
 		renderer = new THREE.WebGLRenderer();
-		renderer.setSize( 800, 600 );
+		renderer.setSize( 961, 1000 );
 		document.body.appendChild( renderer.domElement );
 		//POST PROCESSING
 		//Create Shader Passes
