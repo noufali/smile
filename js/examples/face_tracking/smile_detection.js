@@ -132,7 +132,7 @@ function badTVeffect() {
 
 		//init renderer
 		renderer = new THREE.WebGLRenderer();
-		renderer.setSize( 800,800 );
+		renderer.setSize( 950,800 );
 		document.body.appendChild( renderer.domElement );
 		//POST PROCESSING
 		//Create Shader Passes
@@ -170,33 +170,33 @@ function badTVeffect() {
 			nIntensity: 0.4
 		};
 
-    gui = new dat.GUI();
+//     gui = new dat.GUI();
 
-		gui.add(badTVParams, 'mute').onChange(onToggleMute);
-		var f1 = gui.addFolder('Bad TV');
-		f1.add(badTVParams, 'show').onChange(onToggleShaders);
-		f1.add(badTVParams, 'distortion', 0.1, 20).step(0.1).listen(m).name('Thick Distort').onChange(onParamsChange);
-		f1.add(badTVParams, 'distortion2', 0.1, 20).step(0.1).listen().name('Fine Distort').onChange(onParamsChange);
-		f1.add(badTVParams, 'speed', 0.0,1.0).step(0.01).listen().name('Distort Speed').onChange(onParamsChange);
-		f1.add(badTVParams, 'rollSpeed', 0.0,1.0).step(0.01).listen().name('Roll Speed').onChange(onParamsChange);
-		f1.open();
-		var f2 = gui.addFolder('RGB Shift');
-		f2.add(rgbParams, 'show').onChange(onToggleShaders);
-		f2.add(rgbParams, 'amount', 0.0, 0.1).listen().onChange(onParamsChange);
-		f2.add(rgbParams, 'angle', 0.0, 2.0).listen().onChange(onParamsChange);
-		f2.open();
-		var f4 = gui.addFolder('Static');
-		f4.add(staticParams, 'show').onChange(onToggleShaders);
-		f4.add(staticParams, 'amount', 0.0,1.0).step(0.01).listen().onChange(onParamsChange);
-		f4.add(staticParams, 'size', 1.0,100.0).step(1.0).onChange(onParamsChange);
-		f4.open();
-		var f3 = gui.addFolder('Scanlines');
-		f3.add(filmParams, 'show').onChange(onToggleShaders);
-		f3.add(filmParams, 'count', 50, 1000).onChange(onParamsChange);
-		f3.add(filmParams, 'sIntensity', 0.0, 2.0).step(0.1).onChange(onParamsChange);
-		f3.add(filmParams, 'nIntensity', 0.0, 2.0).step(0.1).onChange(onParamsChange);
-		f3.open();
-		gui.close();
+// 		gui.add(badTVParams, 'mute').onChange(onToggleMute);
+// 		var f1 = gui.addFolder('Bad TV');
+// 		f1.add(badTVParams, 'show').onChange(onToggleShaders);
+// 		f1.add(badTVParams, 'distortion', 0.1, 20).step(0.1).listen(m).name('Thick Distort').onChange(onParamsChange);
+// 		f1.add(badTVParams, 'distortion2', 0.1, 20).step(0.1).listen().name('Fine Distort').onChange(onParamsChange);
+// 		f1.add(badTVParams, 'speed', 0.0,1.0).step(0.01).listen().name('Distort Speed').onChange(onParamsChange);
+// 		f1.add(badTVParams, 'rollSpeed', 0.0,1.0).step(0.01).listen().name('Roll Speed').onChange(onParamsChange);
+// 		f1.open();
+// 		var f2 = gui.addFolder('RGB Shift');
+// 		f2.add(rgbParams, 'show').onChange(onToggleShaders);
+// 		f2.add(rgbParams, 'amount', 0.0, 0.1).listen().onChange(onParamsChange);
+// 		f2.add(rgbParams, 'angle', 0.0, 2.0).listen().onChange(onParamsChange);
+// 		f2.open();
+// 		var f4 = gui.addFolder('Static');
+// 		f4.add(staticParams, 'show').onChange(onToggleShaders);
+// 		f4.add(staticParams, 'amount', 0.0,1.0).step(0.01).listen().onChange(onParamsChange);
+// 		f4.add(staticParams, 'size', 1.0,100.0).step(1.0).onChange(onParamsChange);
+// 		f4.open();
+// 		var f3 = gui.addFolder('Scanlines');
+// 		f3.add(filmParams, 'show').onChange(onToggleShaders);
+// 		f3.add(filmParams, 'count', 50, 1000).onChange(onParamsChange);
+// 		f3.add(filmParams, 'sIntensity', 0.0, 2.0).step(0.1).onChange(onParamsChange);
+// 		f3.add(filmParams, 'nIntensity', 0.0, 2.0).step(0.1).onChange(onParamsChange);
+// 		f3.open();
+// 		gui.close();
 
 
     onToggleShaders();
